@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validationModuleActivation</fullName>
+    <active>true</active>
+    <description>no se puede vincular un modulo inactivo a un trail</description>
+    <errorConditionFormula>IF(  NOT($ObjectType.Module__c.Fields.active__c == true)  , true, false)</errorConditionFormula>
+    <errorMessage>You cannot link a module inactive</errorMessage>
+</ValidationRule>
